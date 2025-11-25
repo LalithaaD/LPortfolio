@@ -1,0 +1,201 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should are defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 222 47% 5%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 8%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 6%;
+    --popover-foreground: 210 40% 98%;
+
+    /* primary token declared below */
+
+    --secondary: 222 47% 12%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    /* accent token declared below */
+    /* Updated palette: --primary (bright pink) and --accent (deep magenta) */
+    --primary: 323 92% 35%; /* token: --primary now matches --accent (#AA076B) */
+    --accent: 323 92% 35%;  /* token: --accent (was #b91d73), now #AA076B */
+    --primary-foreground: 0 0% 100%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: var(--primary);
+
+    --radius: 0.75rem;
+
+    /* Custom design tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
+    --gradient-dark: linear-gradient(180deg, hsl(222 47% 5%) 0%, hsl(222 47% 8%) 100%);
+    --glow-primary: 0 0 40px hsl(var(--primary) / 0.3);
+    --shadow-card: 0 10px 40px -10px hsl(var(--primary) / 0.2);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Additional tokens for remaining hard-coded colors */
+    --grid-line: 210 33% 17%; /* token: --grid-line */
+    --chart-border: 0 0% 80%; /* token: --chart-border */
+    --chart-white: 0 0% 100%; /* token: --chart-white */
+  }
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(90deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Name-specific gradient requested */
+  .name-gradient {
+    /* Landing name set to deep magenta */
+    background: hsl(var(--accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Remove drop shadows for cards/tiles per request */
+  .card-glow {
+    box-shadow: none;
+  }
+
+  /* Global overrides to match requested highlight color */
+  .text-primary {
+    color: hsl(var(--primary)) !important;
+  }
+
+  .text-accent {
+    color: hsl(var(--accent)) !important;
+  }
+
+  .bg-primary {
+    background-color: hsl(var(--primary)) !important;
+  }
+
+  .border-cyan-500 {
+    --tw-border-opacity: 1;
+    border-color: hsl(var(--accent)) !important;
+  }
+
+  .hover\:border-cyan-500:hover {
+    border-color: hsl(var(--accent)) !important;
+  }
+
+  .hover\:text-primary:hover,
+  .group:hover .group-hover\:text-primary {
+    color: hsl(var(--primary)) !important;
+  }
+
+  .hover\:text-accent:hover,
+  .group:hover .group-hover\:text-accent {
+    color: hsl(var(--accent)) !important;
+  }
+
+  .border-accent {
+    --tw-border-opacity: 1;
+    border-color: hsl(var(--accent)) !important;
+  }
+
+  .hover\:border-accent:hover {
+    border-color: hsl(var(--accent)) !important;
+  }
+
+  /* Make headings use the accent color */
+  h1, h2, h3, h4 {
+    color: hsl(var(--accent));
+  }
+
+  /* Reusable tile appearance - matches Projects tile */
+  .tile {
+    background: transparent;
+    border-radius: 1rem;
+    transition: var(--transition-smooth);
+  }
+
+  .tile--interactive {
+    cursor: pointer;
+    border: 1px solid transparent;
+  }
+
+  .tile:hover,
+  .tile--hover {
+    border-color: hsl(var(--accent));
+    background: hsl(222 47% 8% / 0.12);
+  }
+
+  .tile--selected {
+    border-color: hsl(var(--accent));
+    background: hsl(222 47% 8% / 0.12);
+  }
+
+  /* Focus-visible style for interactive controls only */
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible,
+  summary:focus-visible,
+  [role="button"]:focus-visible,
+  [tabindex]:not([tabindex="-1"]):focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px hsl(var(--primary) / 0.18);
+    border-radius: 0.375rem;
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .hover-lift {
+    transition: var(--transition-smooth);
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-4px);
+  }
+}
