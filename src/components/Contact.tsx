@@ -46,7 +46,7 @@ const Contact = () => {
             aria-label="Credly"
             className="w-14 h-14 flex items-center justify-center tile text-gray-200 border border-transparent tile--interactive transition-colors"
           >
-            <img src="/credly_logo.png" alt="Credly" className="w-8 h-8 object-contain" />
+            <img src={`${import.meta.env.BASE_URL}credly_logo.png`} alt="Credly" className="w-8 h-8 object-contain" />
           </a>
         </div>
       </div>

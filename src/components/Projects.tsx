@@ -127,7 +127,7 @@ const Projects = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <Button asChild variant="outline">
-              <a href="/LalithaM.Divakaruni_Resume.pdf" target="_blank" rel="noopener noreferrer">
+              <a href={`${import.meta.env.BASE_URL}LalithaM.Divakaruni_Resume.pdf`} target="_blank" rel="noopener noreferrer">
                 View Resume
               </a>
             </Button>
