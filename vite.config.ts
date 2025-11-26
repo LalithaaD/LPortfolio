@@ -4,8 +4,8 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ command }) => {
-  // Use "/Portfolio/" for production builds (GitHub Pages), "/" for local dev server
-  const base = command === "build" ? "/Portfolio/" : "/";
+  // Use "/LPortfolio/" for production builds (GitHub Pages), "/" for local dev server
+  const base = command === "build" ? "/LPortfolio/" : "/";
   
   return {
     base,
