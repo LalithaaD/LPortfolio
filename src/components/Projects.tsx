@@ -28,6 +28,13 @@ const projects = [
     url: "https://github.com/LalithaaD/TaskManagementFrontend",
   },
   {
+    title: "Customer Account Management System",
+    description:
+      "Full-stack application with a Spring Boot REST API backend for customer authentication and account management, paired with a React frontend for seamless CRUD operations. API documented via Swagger/OpenAPI.",
+    tags: ["Spring Boot", "Java", "React", "REST API", "H2 Database", "Swagger"],
+    url: "https://github.com/LalithaaD/SpringBoot-React-FE",
+  },
+  {
     title: "Workflow Automation Toolkit",
     description:
       "Automated recurring tasks to reduce manual work by 60%, integrating event-based functions with logging, monitoring, and error handling.",
