@@ -42,7 +42,7 @@ export default function AboutAndSkills() {
       <section id="about" className="relative z-10 py-24">
         <div className="max-w-6xl mx-auto px-6 space-y-8">
           <motion.h2
-            className="text-4xl md:text-5xl font-bold text-accent text-left"
+            className="text-4xl sm:text-4xl md:text-5xl font-bold text-accent text-left"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

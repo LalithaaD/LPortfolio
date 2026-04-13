@@ -5,10 +5,10 @@ import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-24 px-4">
+    <section id="contact" className="py-24">
       <div className="max-w-6xl mx-auto px-6">
         <motion.h2
-          className="text-4xl md:text-5xl font-bold mb-4 text-left text-accent"
+          className="text-4xl sm:text-4xl md:text-5xl font-bold mb-4 text-left text-accent"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -26,6 +26,8 @@ const Contact = () => {
         >
           Let's connect — I'd love to chat!
         </motion.p>
+
+        <p className="text-sm text-muted-foreground mb-8">lalithamadhuri3@gmail.com</p>
 
         <motion.div
           className="flex items-center justify-start gap-4"

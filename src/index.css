@@ -138,11 +138,6 @@ All colors MUST be HSL.
     border-color: hsl(var(--accent)) !important;
   }
 
-  /* Make headings use the accent color */
-  h1, h2, h3, h4 {
-    color: hsl(var(--accent));
-  }
-
   /* Reusable tile appearance - matches Projects tile */
   .tile {
     background: transparent;
@@ -201,5 +196,20 @@ All colors MUST be HSL.
 
   .hover-lift:hover {
     transform: translateY(-4px);
+  }
+
+  @keyframes slide {
+    0% { background-position: 0 0; }
+    100% { background-position: 4rem 4rem; }
+  }
+
+  .animate-slide {
+    animation: slide 20s linear infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-slide {
+      animation: none;
+    }
   }
 }
