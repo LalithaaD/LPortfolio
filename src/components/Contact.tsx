@@ -1,4 +1,5 @@
 import { Mail, Github, Linkedin } from "lucide-react";
+import { motion } from "framer-motion";
 
 // Credly tile will use a simple text fallback; could be replaced with an SVG/logo image if preferred
 
@@ -6,11 +7,33 @@ const Contact = () => {
   return (
     <section id="contact" className="py-24 px-4">
       <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-4xl md:text-5xl font-bold mb-4 text-left text-accent">Contact</h2>
+        <motion.h2
+          className="text-4xl md:text-5xl font-bold mb-4 text-left text-accent"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0 }}
+        >
+          Contact
+        </motion.h2>
 
-        <p className="text-lg text-muted-foreground mb-6 max-w-2xl">Let's connect — I'd love to chat!</p>
+        <motion.p
+          className="text-lg text-muted-foreground mb-6 max-w-2xl"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          Let's connect — I'd love to chat!
+        </motion.p>
 
-        <div className="flex items-center justify-start gap-4">
+        <motion.div
+          className="flex items-center justify-start gap-4"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
           <a
             href="mailto:lalithamadhuri3@gmail.com"
             aria-label="Email"
@@ -48,7 +71,7 @@ const Contact = () => {
           >
             <img src={`${import.meta.env.BASE_URL}credly_logo.png`} alt="Credly" className="w-8 h-8 object-contain" />
           </a>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

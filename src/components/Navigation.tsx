@@ -73,7 +73,7 @@ const Navigation = () => {
             <a
               key={link.href}
               href={link.href}
-              className={`text-sm font-mono transition-colors duration-300 ${
+              className={`text-sm font-sans transition-colors duration-300 ${
                 isActive ? "text-accent font-semibold" : "text-muted-foreground hover:text-accent"
               }`}
             >
@@ -107,7 +107,7 @@ const Navigation = () => {
                 <a
                   key={link.href}
                   href={link.href}
-                  className={`text-2xl font-mono transition-colors ${
+                  className={`text-2xl font-sans transition-colors ${
                     isActive 
                       ? "text-accent font-semibold" 
                       : "text-muted-foreground hover:text-accent"
