@@ -53,8 +53,9 @@ export default function AboutAndSkills() {
 
           {[
             "I'm Lalitha, a developer and designer. I build practical, scalable applications and turn rough ideas into reliable products. I care about clear design, solid engineering, and solutions that help people.",
-            "I'm early in my career and moving fast through hands-on work and steady learning. I break down problems, ship features that matter, and improve with every project. I'm currently interning at Vosyn and actively looking for full-time opportunities.",
-            "Let's create something amazing together.",
+            "I've shipped projects across cloud infrastructure, AI/ML pipelines, mobile platforms, and REST APIs, picking up new stacks fast and going deep where it matters. I'm currently building at Vosyn and actively looking for full-time roles where I can own meaningful work",
+            "If you're building something ambitious, let's talk",
+
           ].map((text, i) => (
             <motion.p
               key={i}
@@ -73,6 +74,7 @@ export default function AboutAndSkills() {
               { label: 'Email', value: 'lalithamadhuri3@gmail.com', href: 'mailto:lalithamadhuri3@gmail.com' },
               { label: 'GitHub', value: 'Lalitha M.Divakaruni', href: 'https://github.com/LalithaaD' },
               { label: 'LinkedIn', value: 'Lalitha M.Divakaruni', href: 'https://www.linkedin.com/in/lalithamadhurid' },
+              { label: 'Location', value: 'Toronto, ON · Open to Relocation and remote opportunities across Canada.', href: null },
             ].map((item, i) => (
               <motion.p
                 key={i}
