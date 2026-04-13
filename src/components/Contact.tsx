@@ -8,7 +8,7 @@ const Contact = () => {
     <section id="contact" className="py-24">
       <div className="max-w-6xl mx-auto px-6">
         <motion.h2
-          className="text-4xl sm:text-4xl md:text-5xl font-bold mb-4 text-left text-accent"
+          className="text-4xl sm:text-5xl md:text-5xl font-bold mb-4 text-left text-accent"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -18,7 +18,7 @@ const Contact = () => {
         </motion.h2>
 
         <motion.p
-          className="text-lg text-muted-foreground mb-6 max-w-2xl"
+          className="text-base sm:text-lg text-muted-foreground mb-3"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -27,7 +27,17 @@ const Contact = () => {
           Let's connect — I'd love to chat!
         </motion.p>
 
-        <p className="text-sm text-muted-foreground mb-8">lalithamadhuri3@gmail.com</p>
+        <motion.p
+          className="text-sm text-muted-foreground mb-8 font-medium hover:text-accent transition-colors"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.25 }}
+        >
+          <a href="mailto:lalithamadhuri3@gmail.com" className="focus:outline-none focus:ring-2 focus:ring-primary rounded px-1">
+            lalithamadhuri3@gmail.com
+          </a>
+        </motion.p>
 
         <motion.div
           className="flex items-center justify-start gap-4"

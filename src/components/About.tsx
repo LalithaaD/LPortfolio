@@ -42,7 +42,7 @@ export default function AboutAndSkills() {
       <section id="about" className="relative z-10 py-24">
         <div className="max-w-6xl mx-auto px-6 space-y-8">
           <motion.h2
-            className="text-4xl sm:text-4xl md:text-5xl font-bold text-accent text-left"
+            className="text-4xl sm:text-5xl md:text-5xl font-bold text-accent text-left"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -59,7 +59,7 @@ export default function AboutAndSkills() {
           ].map((text, i) => (
             <motion.p
               key={i}
-              className="text-lg text-gray-300 leading-relaxed"
+              className="text-base sm:text-lg md:text-lg text-foreground/80 leading-relaxed"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -69,7 +69,7 @@ export default function AboutAndSkills() {
             </motion.p>
           ))}
 
-          <div className="pt-6 space-y-2 text-gray-400">
+          <div className="pt-6 space-y-3 text-foreground/70">
                 {[
               { label: 'Email', value: 'lalithamadhuri3@gmail.com', href: 'mailto:lalithamadhuri3@gmail.com' },
               { label: 'GitHub', value: 'Lalitha M.Divakaruni', href: 'https://github.com/LalithaaD' },
@@ -78,17 +78,18 @@ export default function AboutAndSkills() {
             ].map((item, i) => (
               <motion.p
                 key={i}
+                className="text-sm sm:text-base"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: i * 0.1 + 0.3 }}
               >
-                <span className="font-semibold text-gray-300">{item.label}:</span>{' '}
+                <span className="font-semibold text-foreground">{item.label}:</span>{' '}
                   <a
                     href={item.href}
                     target={item.label !== 'Email' ? '_blank' : undefined}
                     rel="noopener noreferrer"
-                    className="hover:text-accent transition-colors"
+                    className="hover:text-accent transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded px-1"
                   >
                   {item.value}
                 </a>
@@ -102,7 +103,7 @@ export default function AboutAndSkills() {
       <section id="skills" className="relative z-10 py-24">
         <div className="max-w-6xl mx-auto px-6">
           <motion.h2
-            className="text-4xl md:text-5xl font-bold text-accent mb-8 text-left"
+            className="text-4xl sm:text-5xl md:text-5xl font-bold text-accent mb-8 text-left"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -111,7 +112,7 @@ export default function AboutAndSkills() {
             Technical Skills
           </motion.h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {skillCategories.map((category, index) => (
               <motion.div
                 key={category.title}
@@ -123,12 +124,12 @@ export default function AboutAndSkills() {
               >
                 <div className={`h-full p-6 rounded-2xl tile tile--interactive border ${selectedCategory === category.title ? 'tile--selected' : 'border-transparent'}`}>
                   <div>
-                    <h3 className="text-2xl font-bold text-accent mb-4">{category.title}</h3>
+                    <h3 className="text-xl sm:text-2xl font-bold text-accent mb-4">{category.title}</h3>
                     <div className="flex flex-wrap gap-2">
                       {category.skills.map((skill) => (
                         <span
                           key={skill}
-                          className="px-3 py-1.5 text-sm rounded-lg tile text-muted-foreground border border-gray-700/50 transition-colors duration-200"
+                          className="px-3 py-1.5 text-xs sm:text-sm rounded-lg tile text-muted-foreground border border-accent/20 transition-all duration-200 hover:border-accent hover:text-accent hover:bg-accent/5"
                         >
                           {skill}
                         </span>

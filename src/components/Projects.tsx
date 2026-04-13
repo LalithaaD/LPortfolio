@@ -65,7 +65,7 @@ const Projects = () => {
       {/* Projects Section */}
       <section id="projects" className="py-24">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-4xl sm:text-4xl md:text-5xl font-bold mb-8 text-left text-accent">Projects</h2>
+          <h2 className="text-4xl sm:text-5xl md:text-5xl font-bold mb-8 text-left text-accent">Projects</h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {projects.map((project, index) => (
@@ -116,7 +116,7 @@ const Projects = () => {
       <section id="resume" className="relative z-10 py-24">
         <div className="max-w-6xl mx-auto px-6">
           <motion.h2
-            className="text-4xl md:text-5xl font-bold text-accent mb-8 text-left"
+            className="text-4xl sm:text-5xl md:text-5xl font-bold text-accent mb-8 text-left"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -126,13 +126,13 @@ const Projects = () => {
           </motion.h2>
 
           <motion.p
-            className="text-gray-300 mb-6"
+            className="text-base sm:text-lg text-muted-foreground mb-6"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Want to dive deeper into my journey? Check out my full resume!
+            Want to dive deeper into my journey? Check out my full resume:
           </motion.p>
 
           <motion.div

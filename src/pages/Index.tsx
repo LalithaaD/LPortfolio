@@ -20,9 +20,9 @@ const Index = () => {
         <Contact />
       </main>
 
-      <footer className="py-8 px-4 border-t border-gray-800">
-        <div className="max-w-6xl mx-auto text-center text-gray-400">
-          <p className="font-sans text-sm">
+      <footer className="py-8 px-4 border-t border-border">
+        <div className="max-w-6xl mx-auto text-center">
+          <p className="font-sans text-xs sm:text-sm text-muted-foreground">
             Made with 💖 by Lalitha M. Divakaruni
           </p>
         </div>
