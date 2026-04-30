@@ -72,8 +72,8 @@ export default function AboutAndSkills() {
           <div className="pt-6 space-y-3 text-foreground/70">
                 {[
               { label: 'Email', value: 'lalithamadhuri3@gmail.com', href: 'mailto:lalithamadhuri3@gmail.com' },
-              { label: 'GitHub', value: 'Lalitha M.Divakaruni', href: 'https://github.com/LalithaaD' },
-              { label: 'LinkedIn', value: 'Lalitha M.Divakaruni', href: 'https://www.linkedin.com/in/lalithamadhurid' },
+              { label: 'GitHub', value: 'Lalitha M. D', href: 'https://github.com/LalithaaD' },
+              { label: 'LinkedIn', value: 'Lalitha M. D', href: 'https://www.linkedin.com/in/lalithamadhurid' },
               { label: 'Location', value: 'Toronto, ON · Open to Relocation and remote opportunities across Canada.', href: null },
             ].map((item, i) => (
               <motion.p

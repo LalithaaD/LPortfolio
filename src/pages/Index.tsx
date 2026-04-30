@@ -23,7 +23,7 @@ const Index = () => {
       <footer className="py-8 px-4 border-t border-border">
         <div className="max-w-6xl mx-auto text-center">
           <p className="font-sans text-xs sm:text-sm text-muted-foreground">
-            Made with 💖 by Lalitha M. Divakaruni
+            Made with 💖 by Lalitha M. D
           </p>
         </div>
       </footer>

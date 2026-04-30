@@ -59,7 +59,7 @@ export default function Home() {
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-x-hidden">
       <div className="z-10 text-center px-4 sm:px-6">
         <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold leading-tight">
-          <span className="name-gradient">Lalitha M. Divakaruni</span>
+          <span className="name-gradient">Lalitha M. D</span>
         </h1>
         <p className="mt-3 sm:mt-4 text-base sm:text-lg md:text-xl text-white/80 inline-flex items-center justify-center gap-2">
           {displayText}
